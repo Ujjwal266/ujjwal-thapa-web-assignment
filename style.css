@@ -1,0 +1,350 @@
+/* =================================
+   General Page Styles
+   ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f8fafc;
+}
+
+a {
+    color: #2563eb;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+
+/* =================================
+   Header and Navigation
+   ================================= */
+
+.site-header {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* =================================
+   Hero Section
+   ================================= */
+
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 3.5rem;
+    color: #0f172a;
+}
+
+.intro {
+    margin-bottom: 0.5rem;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hero-content p {
+    max-width: 600px;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+
+    background-color: #2563eb;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+
+/* =================================
+   General Sections
+   ================================= */
+
+.content-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.content-section h2 {
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+    font-size: 2rem;
+}
+
+.content-section p {
+    max-width: 800px;
+}
+
+
+/* =================================
+   Skills
+   ================================= */
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.skills-list div {
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.skills-list dt {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2563eb;
+}
+
+.skills-list dd {
+    margin: 0.5rem 0 0;
+}
+
+
+/* =================================
+   Projects
+   ================================= */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #0f172a;
+}
+
+.project-card a {
+    font-weight: bold;
+}
+
+
+/* =================================
+   Contact Form
+   ================================= */
+
+.contact-form {
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 0.8rem 1.5rem;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #2563eb;
+    color: #ffffff;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =================================
+   Footer
+   ================================= */
+
+.site-footer {
+    padding: 2rem;
+    text-align: center;
+
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+
+/* =================================
+   Responsive Design
+   ================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-image img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.7rem;
+    }
+}
