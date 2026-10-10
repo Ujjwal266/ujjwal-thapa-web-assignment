@@ -1,218 +1,105 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio website of Ujjwal Thapa">
-    <title>Ujjwal Thapa | Personal Portfolio</title>
+
+    <meta name="description"
+          content="A responsive image slider built with vanilla JavaScript">
+
+    <title>Image Slider Library | Ujjwal Thapa</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
 </head>
 
 <body>
-
     <header class="site-header">
-        <nav class="navbar" aria-label="Main navigation">
-            <h1>Ujjwal Thapa</h1>
-
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Image Slider Library</h1>
+        <p>A responsive image slider built with HTML, CSS, and JavaScript.</p>
     </header>
 
     <main>
+        <section class="slider-section" aria-label="Image gallery">
+            <div class="slider" data-slider aria-roledescription="carousel"
+                 aria-label="Landscape image gallery">
 
-        <section class="hero">
-            <div class="hero-content">
-                <p class="intro">Hello, I am</p>
+                <div class="slider-viewport">
+                    <div class="slider-track" data-track>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+                                alt="Sunlit mountain landscape"
+                                draggable="false">
+                        </div>
 
-                <h2>Ujjwal Thapa</h2>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85"
+                                alt="Mountain reflected in a clear lake"
+                                draggable="false">
+                        </div>
 
-                <p>
-                    A student interested in web development,
-                    software engineering, and technology.
-                </p>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85"
+                                alt="Sunlight filtering through a green forest"
+                                draggable="false">
+                        </div>
 
-                <a class="button" href="#projects">
-                    View My Projects
-                </a>
-            </div>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=85"
+                                alt="Mountain scenery beside a lake"
+                                draggable="false">
+                        </div>
 
-            <div class="hero-image">
-                <img src="images/profile.jpg"
-                     alt="Profile photograph of Ujjwal Thapa">
-            </div>
-        </section>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85"
+                                alt="Dramatic mountain peaks beneath the sky"
+                                draggable="false">
+                        </div>
+                    </div>
 
+                    <button class="slider-arrow previous"
+                            type="button"
+                            data-previous
+                            aria-label="Previous image">
+                        &#10094;
+                    </button>
 
-        <section id="about" class="content-section">
-            <h2>About Me</h2>
+                    <button class="slider-arrow next"
+                            type="button"
+                            data-next
+                            aria-label="Next image">
+                        &#10095;
+                    </button>
 
-            <p>
-                My name is Ujjwal Thapa. I am a student with
-                an interest in web development and software
-                engineering. I enjoy learning new technologies,
-                developing websites, and improving my
-                programming skills.
-            </p>
-
-            <p>
-                My goal is to continue developing my technical
-                knowledge and create useful, accessible, and
-                responsive digital experiences.
-            </p>
-        </section>
-
-
-        <section id="skills" class="content-section">
-            <h2>Technical Skills</h2>
-
-            <dl class="skills-list">
-
-                <div>
-                    <dt>HTML5</dt>
-                    <dd>
-                        Creating semantic and accessible
-                        web page structures.
-                    </dd>
+                    <p class="slide-counter" data-counter
+                       aria-live="polite">1 / 5</p>
                 </div>
 
-                <div>
-                    <dt>CSS3</dt>
-                    <dd>
-                        Designing responsive layouts,
-                        typography, colors, and spacing.
-                    </dd>
+                <div class="slider-dots"
+                     data-dots
+                     aria-label="Choose an image">
                 </div>
-
-                <div>
-                    <dt>Python</dt>
-                    <dd>
-                        Developing programs and solving
-                        programming problems.
-                    </dd>
-                </div>
-
-                <div>
-                    <dt>JavaScript</dt>
-                    <dd>
-                        Creating interactive functionality
-                        for websites.
-                    </dd>
-                </div>
-
-                <div>
-                    <dt>Git and GitHub</dt>
-                    <dd>
-                        Managing source code and maintaining
-                        project repositories.
-                    </dd>
-                </div>
-
-            </dl>
-        </section>
-
-
-        <section id="projects" class="content-section">
-            <h2>My Projects</h2>
-
-            <div class="project-container">
-
-                <article class="project-card">
-                    <h3>Personal Portfolio Website</h3>
-
-                    <p>
-                        A responsive personal portfolio website
-                        developed using semantic HTML5 and
-                        external CSS. The website presents my
-                        background, technical skills, projects,
-                        and contact information.
-                    </p>
-
-                    <a href="https://github.com/YOUR_USERNAME/ujjwal-portfolio"
-                       target="_blank"
-                       rel="noopener">
-                        View Repository
-                    </a>
-                </article>
-
-
-                <article class="project-card">
-                    <h3>Student Management System</h3>
-
-                    <p>
-                        A student management project designed
-                        to organize student information and
-                        demonstrate programming and software
-                        development concepts.
-                    </p>
-
-                    <a href="https://github.com/YOUR_USERNAME/student-management"
-                       target="_blank"
-                       rel="noopener">
-                        View Repository
-                    </a>
-                </article>
-
             </div>
         </section>
 
-
-        <section id="contact" class="content-section">
-            <h2>Contact Me</h2>
-
+        <section class="project-info">
+            <h2>About This Project</h2>
             <p>
-                If you would like to get in touch, you can
-                send me a message using the form below.
+                This image slider demonstrates DOM manipulation,
+                event listeners, CSS transitions, responsive design,
+                and infinite slide navigation using vanilla JavaScript.
             </p>
-
-            <form class="contact-form" action="#" method="post">
-
-                <div>
-                    <label for="name">Name</label>
-
-                    <input type="text"
-                           id="name"
-                           name="name"
-                           required>
-                </div>
-
-                <div>
-                    <label for="email">Email</label>
-
-                    <input type="email"
-                           id="email"
-                           name="email"
-                           required>
-                </div>
-
-                <div>
-                    <label for="message">Message</label>
-
-                    <textarea id="message"
-                              name="message"
-                              rows="6"
-                              required></textarea>
-                </div>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
         </section>
-
     </main>
 
-
     <footer class="site-footer">
-        <p>
-            &copy; 2026 Ujjwal Thapa. All rights reserved.
-        </p>
+        <p>&copy; 2026 Ujjwal Thapa. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
